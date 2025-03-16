@@ -1,0 +1,84 @@
+site_name: ACHIEVE
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.instant
+    - content.action.view
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.indexes
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.footer
+  font:
+    text: Lexend
+  logo: assets/logo.png
+  favicon: assets/earth.png
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+nav:
+  - About: index.md
+  - ACHIEVE:
+      - What is ACHIEVE?: achieve/achieve.md
+      - Why ACHIEVE?: achieve/why_achieve.md
+      - How to ACHIEVE?: achieve/how_achieve.md
+  - Tools:
+      - iMetrics: tools/imetrics.md
+      - iShare: tools/ishare.md
+      - Sparrow: tools/sparrow.md
+      - Falcon: tools/falcon.md
+      - Osprey: tools/osprey.md
+      - Hawk: tools/hawk.md
+
+plugins:
+  - search
+  - tags
+
+extra:
+  generator: true
